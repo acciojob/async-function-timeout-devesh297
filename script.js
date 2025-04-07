@@ -1,4 +1,3 @@
-// Get DOM elements
 const textInput = document.getElementById("text");
 const delayInput = document.getElementById("delay");
 const button = document.getElementById("btn");
@@ -11,7 +10,7 @@ function wait(ms) {
 
 // Async function to handle the message display after delay
 async function handleSubmit() {
-  const message = textInput.value;
+  const message = textInput.value.trim(); // Trim whitespace
   const delay = Number(delayInput.value);
 
   // Optional: Basic validation
